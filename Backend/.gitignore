@@ -1,8 +1,10 @@
-node_modules
+# Node dependencies
+node_modules/
+
+# Environment variables
 .env
-# In .gitignore
-uploads/
-*.jpg
-*.png
-*.jpeg
-*.gif
+
+# Optional: Other common ignores
+npm-debug.log
+yarn-error.log
+.DS_Store
