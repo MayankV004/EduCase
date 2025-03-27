@@ -1,4 +1,3 @@
-// src/models/User.js
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
@@ -25,6 +24,14 @@ const UserSchema = new mongoose.Schema({
   phone: {
     type: String,
     trim: true
+  },
+  companyName: {
+    type: String,
+    trim: true
+  },
+  agency: {
+    type: Boolean,
+    default: false
   },
   createdAt: {
     type: Date,

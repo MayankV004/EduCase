@@ -80,37 +80,8 @@ const getMe = async (req, res) => {
 };
 
 
-const updateUser = async (req, res) => {
-  try {
-    const { name, phone } = req.body;
-    const user = await User.findById(req.user.id);
-    if (!user) {
-      return res.status(404).json({ message: 'User not found' });
-    }
-    user.name = name || user.name;
-    user.phone = phone || user.phone;
-
-    if (req.file) {
-      user.profileImage = req.file.path;
-    }
-
-    const updatedUser = await user.save();
-
-    res.status(200).json({
-      _id: updatedUser.id,
-      name: updatedUser.name,
-      email: updatedUser.email,
-      phone: updatedUser.phone,
-      profileImage: updatedUser.profileImage
-    });
-  } catch (error) {
-    res.status(500).json({ message: 'Server error', error: error.message });
-  }
-};
-
 module.exports = {
   registerUser,
   loginUser,
   getMe,
-  updateUser
 };

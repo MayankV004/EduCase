@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 function Page1() {
   return (
     <div className='login-container bg-gray-100 w-full h-screen flex flex-col justify-end md:justify-center md:items-center px-5 pb-5' >
-        <div className='container w-full flex flex-col gap-3 md:w-1/4 md:p-4 md:rounded-lg shadow-md'>
+        <div className='container w-full flex flex-col gap-3 md:w-1/4 md:p-4 md:rounded-lg md:shadow-md'>
             <div className='text-container w-3/4 flex flex-col gap-2 '>
                 <span className='block text-2xl md:text-lg font-semibold'>
                     Welcome to PopX
